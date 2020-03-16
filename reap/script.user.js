@@ -5,7 +5,7 @@ Learn more or give us feedback
 // @version      6.9
 // @description  levans dont look here
 // @author       You
-// @match        https://artofproblemsolving.com/reaper
+// @match        https://artofproblemsolving.com/reaper/*
 // ==/UserScript==
 var random = 270 + Math.random() * 20;
 (async function() {

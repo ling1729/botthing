@@ -10,7 +10,7 @@
 var random = 270 + Math.random() * 20;
 (async function() {
     'use strict';
-    console.log("working");
+    console.log(getSeconds());
 })();
 
 function getSeconds(){

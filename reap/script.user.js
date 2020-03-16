@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Aops Reaper
+// @name         Reaper
 // @namespace    http://tampermonkey.net/
 // @version      6.9
 // @description  levans dont look here
@@ -13,13 +13,6 @@ var random = 270 + Math.random() * 20;
     console.log("working");
 })();
 
-/*function getSeconds(){
-    let minutes = (document.getElementById('last-reap').innerHTML.match(/^(.*?) minute/)||[0,0])[1];
-    let seconds = (minutes == 0) ? 
-        (document.getElementById('last-reap').innerHTML.match(/^(.*?) second/)[1]) : 
-        (((document.getElementById('last-reap').innerHTML.match(/, (.*)/)||["0 second","0 second"])[1].match(/^(.*?) second/)||[0,0])[1]);
-    return +60*minutes + +seconds;
-}*/
 function getSeconds(){
     let x = document.getElementById('last-reap').innerHTML;
     let times = [];

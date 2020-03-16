@@ -1,12 +1,22 @@
+Learn more or give us feedback
 // ==UserScript==
 // @name         Reap
 // @namespace    http://tampermonkey.net/
 // @version      6.9
-// @description  Levans dont look here
+// @description  levans dont look here
 // @author       You
 // @match        https://artofproblemsolving.com/reaper
+// ==/UserScript==
+var random = 270 + Math.random() * 20;
+(async function() {
+    'use strict';
+    if(getSeconds() >= random){
+    	document.getElementById('reap-button').click();
+	random = 270 + Math.random() * 20;
+    }
+})();
 
-//*function getSeconds(){
+/*function getSeconds(){
     let minutes = (document.getElementById('last-reap').innerHTML.match(/^(.*?) minute/)||[0,0])[1];
     let seconds = (minutes == 0) ? 
         (document.getElementById('last-reap').innerHTML.match(/^(.*?) second/)[1]) : 
@@ -32,7 +42,6 @@ function getSeconds(){
 	seconds += Math.pow(60, times.length - 1 - i) * times[i];
     return seconds;
 }
-var random = 270 + Math.random() * 20;
 function beatReaper(){
     if(getSeconds() >= random){
     	document.getElementById('reap-button').click();

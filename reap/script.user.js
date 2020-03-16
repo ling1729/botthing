@@ -1,11 +1,12 @@
 // ==UserScript==
-// @name         Reap
+// @name         Aops Reaper
 // @namespace    http://tampermonkey.net/
 // @version      6.9
 // @description  levans dont look here
 // @author       You
-// @include        https://artofproblemsolving.com/reaper/*
+// @include      https://artofproblemsolving.com/reaper/*
 // ==/UserScript==
+
 var random = 270 + Math.random() * 20;
 (async function() {
     'use strict';

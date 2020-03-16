@@ -1,4 +1,3 @@
-Learn more or give us feedback
 // ==UserScript==
 // @name         Reap
 // @namespace    http://tampermonkey.net/

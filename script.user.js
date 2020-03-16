@@ -24,7 +24,7 @@ setInterval(checkDay,1000);
 
 async function checkDay(){
     if(new Date().getDay() != await GM.getValue("date")){
-        GM.setValue("date", new Date().getDay());
+        await GM.setValue("date", new Date().getDay());
         location.reload();
     }
 }

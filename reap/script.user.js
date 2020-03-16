@@ -4,7 +4,7 @@
 // @version      6.9
 // @description  levans dont look here
 // @author       You
-// @include      https://artofproblemsolving.com/reaper/*
+// @match      https://artofproblemsolving.com/reaper/*
 // ==/UserScript==
 
 var random = 270 + Math.random() * 20;

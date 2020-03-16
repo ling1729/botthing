@@ -14,6 +14,7 @@ var random = 270 + Math.random() * 20;
     	document.getElementById('reap-button').click();
 	random = 270 + Math.random() * 20;
     }
+    console.log(getSeconds());
 })();
 
 /*function getSeconds(){

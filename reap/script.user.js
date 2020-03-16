@@ -9,11 +9,7 @@
 var random = 270 + Math.random() * 20;
 (async function() {
     'use strict';
-    if(getSeconds() >= random){
-    	document.getElementById('reap-button').click();
-	random = 270 + Math.random() * 20;
-    }
-    console.log(getSeconds());
+    console.log("working");
 })();
 
 /*function getSeconds(){

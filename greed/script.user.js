@@ -15,7 +15,7 @@ var day;
     day = new Date().getDay();
     await GM.setValue("date", day);
     console.log(await GM.getValue("date"));
-    let randomNumber = Math.floor(Math.random() * Math.floor(40) + 10);
+    let randomNumber = Math.floor(Math.random() * Math.floor(20) + 30);
     document.getElementById('input-number').value = randomNumber;
     document.getElementById('submit-button').click()
 })();

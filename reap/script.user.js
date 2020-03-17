@@ -62,7 +62,7 @@ function getRecent(){
 			if(/Quadruple/.test(time)){
 				times.push(Math.floor(parseTime(time.match(/(.*) <strong>/)[1])/4));
 			}
-			if(/Octuple/.test(time)){
+			if(/octuple/.test(time)){
 				times.push(Math.floor(parseTime(time.match(/(.*) Ultra/)[1])/8));
 			}
 		} else {

@@ -6,7 +6,8 @@
 // @author       You
 // @match      https://artofproblemsolving.com/reaper/*
 // ==/UserScript==
-var randomness = 10;
+var randomness = 15;
+var skew = 10;
 var random = Math.random() * randomness * 2 - randomness;
 (async function() {
     'use strict';
@@ -73,7 +74,7 @@ function getRecent(){
 	return sum/times.length;
 }
 function beatReaper(){
-    if(getSeconds() >= random + getRecent()){
+    if(getSeconds() >= random + getRecent() + skew){
     	document.getElementById('reap-button').click();
 		random = Math.random() * randomness * 2 - randomness;
     }

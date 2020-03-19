@@ -52,7 +52,7 @@ function getRecent(){
 	let times = [];
 	for(let i = 1; i < 5; i++){
 		let time = document.getElementById('recent-reaps').childNodes[i].innerHTML.match(/gained (.*)/)[1];
-		if(/Reap/.test(time)){
+		if(/Reap/i.test(time)){
 			if(/Double/.test(time)){
 				times.push(Math.floor(parseTime(time.match(/(.*) Double/)[1])/2));
 			}

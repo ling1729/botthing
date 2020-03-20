@@ -74,7 +74,7 @@ function getRecent(){
 	return sum/times.length;
 }
 function beatReaper(){
-	if(getSeconds() >= random + getRecent()){
+	if(document.getElementById('reap-button-container').style.display != 'none' && getSeconds() >= random + getRecent()){
 		document.getElementById('reap-button').click();
 		random = Math.random() * (max - min) + min;
 	}

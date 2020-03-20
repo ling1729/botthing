@@ -6,9 +6,9 @@
 // @author		 You
 // @match	   https://artofproblemsolving.com/reaper/*
 // ==/UserScript==
-var randomness = 15;
-var skew = 10;
-var random = Math.random() * randomness * 2 - randomness;
+var min = -5;
+var max =  10;
+var random = Math.random() * (max - min) + min;
 (async function() {
 	'use strict';
 	console.log(getSeconds());
@@ -74,9 +74,9 @@ function getRecent(){
 	return sum/times.length;
 }
 function beatReaper(){
-	if(getSeconds() >= random + getRecent() + skew){
+	if(getSeconds() >= random + getRecent()){
 		document.getElementById('reap-button').click();
-		random = Math.random() * randomness * 2 - randomness;
+		random = Math.random() * (max - min) + min;
 	}
 }
 window.setInterval(beatReaper, 1000);

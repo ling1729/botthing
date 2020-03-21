@@ -70,11 +70,14 @@ function getRecent(){
 		}
 	}
 	let sum = 0;
+	times = times.filter(function(value, index, arr){ return value > 5;});
 	times.forEach(function(item){sum += item;});
 	return sum/times.length;
 }
 function beatReaper(){
-	if(document.getElementById('reap-button-container').style.display != 'none' && getSeconds() >= random + getRecent()){
+	let average = getRecent();
+	document.getElementById('current-game').childNodes[3].innerHTML = "target: " + average;
+	if(document.getElementById('reap-button-container').style.display !== 'none' && getSeconds() >= random + average){
 		document.getElementById('reap-button').click();
 		random = Math.random() * (max - min) + min;
 	}

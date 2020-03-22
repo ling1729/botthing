@@ -87,39 +87,7 @@ function unParseTime(e, t) {
     }
     return e + " second" + (e != 1 ? "s" : "")
 }
-/*
-function parseTime(x){
-	let times = [0, 0, 0];
-	let seconds = 0;
-	for(let i = 1; i < x.length; i++){
-		if(x.charAt(i) == ' ' && x.charAt(i - 1) != ','){
-			let stop = false;
-			for(let j = i - 1; j >= -1 && !stop; j--){
-				if(j == -1 || x.charAt(j) == ' '){
-					stop = true;
-					let stop2 = false;
-					for(let k = i + 1; k <= x.length && !stop2; k++){
-						if(x.substring(i + 1, k) == "second"){
-							stop2 = true;
-							times[2] = x.substring(j + 1, i);
-						}
-						if(x.substring(i + 1, k) == "minute"){
-							stop2 = true;
-							times[1] = x.substring(j + 1, i);
-						}
-						if(x.substring(i + 1, k) == "hour"){
-							stop2 = true;
-							times[0] = x.substring(j + 1, i);
-						}
-					}
-				}
-			}
-		}
-	}
-	for(let i = 0; i < times.length; i ++)
-	seconds += Math.pow(60, times.length - 1 - i) * times[i];
-	return seconds;
-}*/
+
 function getSeconds(){
 	return parseTime(document.getElementById('last-reap').innerHTML);
 }

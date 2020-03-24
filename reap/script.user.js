@@ -119,7 +119,7 @@ function getRecent(){
 }
 function beatReaper(){
 	let average = getRecent();
-	document.getElementById('current-game').childNodes[3].innerHTML = "target: " + unParseTime(average);
+	document.getElementById('current-game').childNodes[3].innerHTML = "target: " + unParseTime(average + random);
 	if(document.getElementById('reap-button-container').style.display !== 'none' && getSeconds() >= random + average){
 		document.getElementById('reap-button').click();
 		random = Math.random() * (max - min) + min;

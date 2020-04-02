@@ -105,6 +105,9 @@ function getRecent(){
 			if(/Quadruple/.test(time)){
 				times.push(Math.floor(parseTime(time.match(/(.*) <strong>/)[1])/4));
 			}
+			if(/Quintuple/.test(time)){
+				times.push(Math.floor(parseTime(time.match(/(.*) <strong>/)[1])/5));
+			}
 			if(/octuple/.test(time)){
 				times.push(Math.floor(parseTime(time.match(/(.*) Ultra/)[1])/8));
 			}
